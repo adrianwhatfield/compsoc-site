@@ -2,46 +2,21 @@
     "years": [{
         "year": "2026/27",
         "semesterOne": [{
+                "title": "Welcome Week - Computer Science Quiz",
+                "description": [
+                    "During welcome week we will be hosting a quiz featuring general knowledge, computing, and logic questions. We will also talk about our plans for the society sessions.",
+                    "Information is on our instagram (@ysj.compsoc)."
+                ],
+                "links": [
+                ]
+            }, {
                 "title": "Week 1 - Python Programming Challenges",
                 "description": [
-                    "Paragraph 1",
-                    "Paragraph 2",
-                    "Paragraph 3"
                 ],
                 "links": [
-                    "https://github.com",
-                    "http://localhost:8000/index.html"
                 ]
-            }, {
-                "title": "Week 2 - Something Else",
-                "description": [
-                    "Paragraph 1",
-                    "Paragraph 2"
-                ],
-                "links": [
-                    "https://github.com"
-                ]
-            }],
-        "semesterTwo": [{
-                "title": "Week 1 - Blah",
-                "description": [
-                    "Paragraph 1",
-                    "Paragraph 2"
-                ],
-                "links": [
-                    "https://github.com",
-                    "http://localhost:8000/index.html"
-                ]
-            }, {
-                "title": "Week 2 - Something Else",
-                "description": [
-                    "Paragraph 1",
-                    "Paragraph 2"
-                ],
-                "links": [
-                    "https://github.com",
-                    "http://localhost:8000/index.html"
-                ]
-            }]
+            }
+        ],
+        "semesterTwo": []
     }]
 }
