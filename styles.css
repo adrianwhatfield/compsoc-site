@@ -60,3 +60,7 @@ main {
     h1 > a {visibility: hidden;}
 }
 
+#years > ul > li {
+    cursor: pointer;
+}
+
