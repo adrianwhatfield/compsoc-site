@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YSJ Computer Science Society - Command line Challenge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="pagetitle">
+    <img src="https://ysjcompsoc.co.uk/logo.png" alt="YSJ Computer Science Society Logo" id="keepimage">
+    <h1 id="longtitle">YSJ Computer Science Society Command line Challenge</h1>
+    <h1 id="shorttitle">Command line</h1>
+    <img src="https://ysjcompsoc.co.uk/logo.png" alt="YSJ Computer Science Society Logo" id="removeimage">
+  </div>
+  <div class="content-wrapper">
+    <aside>
+      <span class="menu-title">Jump To...</span>
+      <div class="menu">
+        <ul>
+          <li><a href="#environment-setup">Setting up the environment</a></li>
+          <li><a href="#terminal-orientation">Terminal orientation</a></li>
+          <li><a href="#filesystem-navigation">Filesystem navigation</a></li>
+          <li><a href="#reading-and-writing-files">Reading and writing to files</a></li>
+          <li><a href="#output-redirection">Redirection operators</a></li>
+        </ul>
+      </div>
+    </aside>
+    <main>
+      <section id="environment-setup">
+        <h2>Setting up the environment</h2>
+        <div>
+          <p>To provide an environment for this exercise we have used docker. Using this image to create a docker
+            container
+            will allow you to use an environment setup to be used for the exercises below. To copy our environment
+            follow
+            the
+            steps listed below.</p>
+          <ol>
+            <li>Setup docker</li>
+            <li>Download the image</li>
+            <li>Run the image</li>
+            <li>Start an interactive shell</li>
+          </ol>
+        </div>
+      </section>
+      <section id="terminal-orientation">
+        <h2>Terminal orientation</h2>
+        <div>
+          <p>
+            This may be your first time using the terminal. Thankfully the terminal is less intimidating then it first
+            may
+            appear. There is no need to be intimidated by the terminal, it is normally quite hard to accidentally cause
+            issues using the terminal especially when not running as root. Additionally, as this environment is
+            containerised the environment is isolated and should the worst happen then you can always reset the
+            container
+            from the original image. This guide is aimed to give a basic understanding of several terminal features,
+            commands and methods, it should give you the basis on which you can further research and understand the
+            terminal.
+          </p>
+          <p>
+            I would encourage you to try a few basic commands now. try some of the following:
+          <ul>
+            <li><code class="inline">ls</code> - Lists the content of the working directory</li>
+            <li><code class="inline">pwd</code> - Displays the current working directory</li>
+            <li><code class="inline">whoami</code> - Displays the name of user which executed the command</li>
+          </ul>
+          </p>
+          <h3>Command Structure</h3>
+          <p>
+            <strong>The basic structure of a command</strong> is <code
+              class="inline">command [options] [arguments]</code>
+          </p>
+          <p>
+            A command is typically an executable or a script which is stored in a directory linked to by the PATH
+            variable,
+            this is not particularly relevant yet but it is good to note that commands are nothing special they are just
+            executables or scripts, you can make your own or install more you can even change the commands that
+            typically
+            come bundled with most Linux distros.<br>
+            For instance the ls command is just a binary executable stored in /usr/bin/ls <br>
+            Use the ls command to print the contents of the current directory
+          </p>
+          <p>
+            Options are a way type of argument which changes the way a command works, typically given to the command in
+            the
+            form of"flags" or "switches". Typical notation for flags is to use a single dash '-' for one letter flags
+            e.g.
+            'ls -a' or a double dash for example 'ls --all'
+          </p>
+          <p>
+            Arguments are the data passed to a command, this may be in the form of standard input, text passed through
+            the
+            command or through a file. Different commands handle standard input differently and documentation should be
+            referred to to determine specifics.<br>
+            The terminal parser is responsible for splitting a command into separate arguments. Note that whitespace
+            will
+            usually be treat as separate arguments, if I wanted to create a file called "my file.txt" the command <code
+              class="inline">touch my file.txt</code> will create files called "my" and "file.txt" as they are treat as
+            separate
+            inputs. There are several ways to avoid this. You can escape the space character by putting a backslash '\'
+            in front of the space will resolve this for instance <code class="inline">touch my\ file.txt</code> or
+            quotes
+            can be used, both single and double quotes have slightly different behavior but single quotes will always
+            treat
+            input literally for our example you could use <code class="inline">touch 'myfile.txt'</code>.
+          </p>
+          <p>
+            using the example of <code class="inline">ls -l ~/example-directory</code> what is the command, what is
+            option
+            and what is an argument.
+          </p>
+          <h3>Documentation and Help</h3>
+          <p>
+            If you are ever unsure about a command most Linux distros come with the "info" and "man" utilities which can
+            be
+            used to lookup information directly in the command line. Alternatively many commands allow the use of the
+            "--help" flag which can be used to see information about a command: "ls --help", "man ls" and "info ls" all
+            work
+            and give slightly different information try using them.
+          </p>
+          <h3>Other important terminology</h3>
+          <p>
+            Some other terminology is explained below:
+          <ul>
+            <li>Working directory - this is the directory that you are currently in. Any commands you execute from here
+              will
+              assume unless otherwise specified that any files to read from or write to will be in this directory.</li>
+            <li>Path - not to be mistaken with the PATH environment variable, a path is a reference to a file or
+              directory.
+              A path can start from the root directory '/' as in '/etc/passwd', we would call this an absolute path,
+              based
+              on the current working directory eg 'example-directory/Sarabanda.md'</li>
+            <li>Exit Code - An exit code is a numeric output that is returned to the shell when a command finished
+              executing, conventionally 0 means success or command exited normally and and non-zero response is a
+              different
+              error. These are not typically shown on the terminal but can be a great troubleshooting tool if added to
+              the
+              prompt</li>
+            <li>Shell - A shell is the software that allows the user to interact with the operating system, we are using
+              bash alternatives such as zsh or nushell are also popular</li>
+            <li>Prompt - The prompt is the string that is shown at the start of the command line to show that the
+              terminal
+              is ready for user input. Often it will just be a '>' symbol or it may feature other information such as
+              the
+              exit code of the previous command, current user or working directory</li>
+          </ul>
+          </p>
+        </div>
+      </section>
+      <section id="filesystem-navigation">
+        <h2>Filesystem Navigation</h2>
+        <div>
+          <p>Now we have the basics of what the command line is out the way we must learn to use it.</p>
+          <h3>Changing directory</h3>
+          <p>To change directory we use the 'cd' command this can be used with an absolute path such as <code
+              class="inline">cd /home/ysj/example-directory</code> or a relative path for instance <code
+              class="inline">cd ./example-directory</code> note the use of the '.' in the previous command. This is not
+            necessary but is used by convention as it refers to the current directory. </p>
+          <p>
+            Relative paths become more powerful when you use the path '..'. This refers to the directory above this one.
+            If
+            you were in the directory "/home/ysj/example-directory" and you wanted to return to "/home/ysj" you may use
+            the
+            command "cd .." to return.
+          </p>
+          <p>
+            The symbol '~' may be used in certain paths. This is used at the beginning of a path to make it relative to
+            your
+            home folder which is equivalent to a user-area. Wherever you are in your filesystem you can use the command
+            <code class="inline">cd ~</code> to return to your home directory, or you can use <code
+              class="inline">cd ~/Documents</code> to return to the documents directory.
+          </p>
+          <h3>Listing the directory</h3>
+          <p>
+            The ls command is used to list the current directory, including all files and subdirectories. Note that
+            files
+            beginning with '.' are considered hidden files on linux as such ls does not list them by default, if you
+            want
+            to
+            list all files and directories including hidden files then the '-a' flag can be used like so <code
+              class="inline">ls -a</code>.
+          </p>
+          <h3>Print Working Directory</h3>
+          <p>
+            To determine the absolute path of your current working directory the <code class="inline">pwd</code> command
+            can
+            be used. This can be helpful in an interactive shell but is often more useful when scripting as most of the
+            time
+            the shell prompt will include the current working directory.
+          </p>
+        </div>
+      </section>
+      <section id="reading-and-writing-files">
+        <h2>Reading and writing to files</h2>
+        <div>
+          <p>
+            Reading and writing to files allows you to write code in the terminal, edit configuration files and store
+            and
+            retrieve information. There are several approaches to doing this which will be detailed below.
+          </p>
+          <h3>Cat, tail and head</h3>
+          <p>
+            The cat command is the most basic way in which you can print a file to the terminal, short for concatenate
+            the
+            cat command will read a file and output this to the terminal for instance <code
+              class="inline">cat ~/example-directory/Birinus.md</code> will output the contents of the file Birinus.md
+            as
+            the name suggests, giving cat multiple files will result in the files being output one after another,
+            concatenating them.
+          </p>
+          <p>
+            The tail and head commands allow you to get a specific number of lines from the beginning or end of a file
+            respectively. This can be extremely useful when dealing with structured data for instance a log file in CSV
+            format will contain the headings for each value on the first line and typically new entries are added to the
+            bottom of the file. An example of the use of this would be <code class="inline">echo "$(head -n 1 ~/example-directory/openvpn.csv)\n$(tail -n 1 ~/example-directory/openvpn.csv)"
+        </code> which would output the header row and most recent entry in the log file.
+          </p>
+          <p>
+            The less and more commands allow you to read a file interactively and both have very similar behavior, the
+            main
+            difference is that less is more modern and has some additional features, for instance in some environments
+            more
+            is unable to go back up a file if you have scrolled past the point which you wanted to read.
+          </p>
+          <p>
+            We can interactively read and write to files using a terminal text editor such as Vim or Nano. Vim is a
+            modal
+            editor meaning it has several different modes, it is optimised for use on a keyboard only terminal and can
+            be
+            very efficient when you are used to it. However, nano is much simpler, to open nano on a file you use the
+            command <code class="inline">nano [filename]</code> you can then use the arrow keys to navigate the file and
+            backspace or type as you would expect. Try editing one of the sample files in the docker environment.
+          </p>
+          <p>
+            Related is the word count command. The command counts the words in a file or in what is inputted to it.
+            Additionally, the -l flag can be used to count the number of lines in the input rather than the number of
+            words.
+          </p>
+        </div>
+      </section>
+      <section id="output-redirection">
+        <h2>Redirection operators</h2>
+        <div>
+          <p>
+            It is possible to redirect the output from one command into another in several ways.
+          </p>
+          <p>
+            The pipe '|' is the simplest way to do this. This redirects the output of one command to the input of
+            another.
+            You may use this to get more complex behaviors for instance if you were to want to count the number of files
+            in
+            a directory you could use <code class="inline">ls | wc -l</code>
+          </p>
+          <p>
+            The '>' operator allows you to redirect the output of a command to a file, but this will overwrite the file.
+            Alternatively, the operator '&gt;&gt;' can be used to append the output of a command to a file. Both of
+            these
+            operators will create the file if it does not already exist. These can be very useful. For instance if you
+            want
+            to change your hostname you can use the command <code
+              class="inline">echo "my-hostname" &gt; /etc/hostname</code>
+            or if you had a server executable which you wanted to add the output to a log file you may use <code
+              class="inline"> ./server &gt;&gt; serverlog.log</code>.
+          </p>
+          <p>
+            Some commands don't allow you to use a file as the input. In such cases the '&lt;' operator can be used,
+            this
+            allows you to input a file to the input of the command.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

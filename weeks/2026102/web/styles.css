@@ -1,0 +1,175 @@
+:root {
+  --bg-color: #080708;
+  --text-color: #f3f3f3;
+  --text-color-d1: #c4c4c4;
+  --text-color-d2: #919191;
+  --accent-bg: #181318;
+  --box-bg: #100D10;
+
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.pagetitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-bg);
+  padding: 1vh 2.5vw;
+  gap: 0 1vw;
+}
+
+.pagetitle h1 {
+  font-size: 6ch;
+  text-align: center;
+}
+
+.pagetitle img {
+  max-height: 20ch;
+  max-width: 20ch;
+  height: 100%;
+  width: 100%;
+}
+
+.content-wrapper {
+  max-width: 120ex;
+  margin: auto;
+  display: grid;
+  gap: 2ex;
+  grid-template-columns: 1fr 4fr;
+}
+
+aside {
+  position: sticky;
+  align-self: start;
+  height: fit-content;
+  top: 1rem;
+  margin-top: 3ch;
+  background-color: var(--box-bg);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--accent-bg);
+  border-radius: 5px;
+}
+
+aside li {
+  list-style: none;
+  margin: 1ch 0;
+}
+
+aside ul {
+  padding: 0 1ex;
+}
+
+aside a {
+  transition-duration: 0.25s;
+}
+
+aside a:hover {
+  color: var(--text-color-d1);
+}
+
+aside a:active {
+  color: var(--text-color-d2);
+}
+
+.menu-title {
+  padding: 0 1ex 0 1ex;
+  background-color: var(--accent-bg);
+}
+
+.menu-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2ch;
+  margin-top: 3ch;
+}
+
+section {
+  background-color: var(--box-bg);
+  height: fit-content;
+  background-color: var(--box-bg);
+  border: 2px solid var(--accent-bg);
+  border-radius: 5px;
+}
+
+section h2 {
+  background-color: var(--accent-bg);
+  margin: 0;
+  padding: 0.25ch 16px;
+}
+
+section div {
+  padding: 0.25ch 16px;
+}
+
+#longtitle {
+  display: block;
+}
+
+#shorttitle {
+  display: none;
+}
+
+#removeimage {
+  display: block;
+}
+
+code.inline {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #2a242a;
+  color: #f1c6ff;
+  border: 1px solid #413841;
+  border-radius: 0.3em;
+  padding: 0.1em 0.35em;
+  font-size: 0.9em;
+}
+
+@media (max-width: 850px) {
+  #longtitle {
+    display: none;
+  }
+
+  #shorttitle {
+    display: block;
+  }
+
+  #removeimage {
+    display: none;
+  }
+
+  aside {
+    display: none;
+  }
+
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    border-radius: 0;
+  }
+
+  .pagetitle {
+    padding: 1vh 1vw;
+  }
+}
