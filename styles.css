@@ -64,3 +64,11 @@ main {
     cursor: pointer;
 }
 
+#years li {
+    margin-top: 0.5ch;
+    transition-duration: 0.3ms;
+}
+
+#years li:hover{
+    text-decoration: underline;
+}
