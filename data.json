@@ -1,22 +1,32 @@
 {
-    "years": [{
-        "year": "2026/27",
-        "semesterOne": [{
-                "title": "Welcome Week - Computer Science Quiz",
-                "description": [
-                    "During welcome week we will be hosting a quiz featuring general knowledge, computing, and logic questions. We will also talk about our plans for the society sessions.",
-                    "Information is on our instagram (@ysj.compsoc)."
-                ],
-                "links": [
-                ]
-            }, {
-                "title": "Week 1 - Python Programming Challenges",
-                "description": [
-                ],
-                "links": [
-                ]
-            }
-        ],
-        "semesterTwo": []
-    }]
+    "years": [
+        {
+            "year": "2026/27",
+            "semesterOne": [
+                {
+                    "title": "Welcome Week - Computer Science Quiz",
+                    "description": [
+                        "During welcome week we will be hosting a quiz featuring general knowledge, computing, and logic questions. We will also talk about our plans for the society sessions.",
+                        "Information is on our instagram (@ysj.compsoc)."
+                    ],
+                    "links": []
+                },
+                {
+                    "title": "Week 1 - Python Programming Challenges",
+                    "description": [],
+                    "links": []
+                },
+                {
+                    "title": "Week 2 - Command Line Challenge",
+                    "description": [
+                        "A set of command line challenges. Take part to expand your Linux knowledge and skills."
+                    ],
+                    "links": [
+                        "http://ysjcompsoc.co.uk/weeks/2026102/web/index.html"
+                    ]
+                }
+            ],
+            "semesterTwo": []
+        }
+    ]
 }
