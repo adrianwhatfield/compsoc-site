@@ -273,14 +273,37 @@
           </p>
         </div>
       </section>
+      <section id="shell-scripts">
+        <h2>Shell Scripts</h2>
+        <div>
+          <p>
+            Shell scripts are a feature of a shell which it allows you to write a script which can be run on demand. For
+            instance when you open a bash shell it will always look for the file ~/.bashrc if it finds this file then
+            it will run it. This allows you to customise the shell prompt, set aliases or enforce certain behaviors
+            which you want to occur each time you open the terminal. Shell scripting is not just used for this, you can
+            create installers, utilities or small programs with it. This can be very helpful as all Linux servers or
+            computers should be able to write shell scripts.
+          </p>
+          <p>
+            To run most executable files including shell scripts in the terminal you can use <code
+              class="inline">./myscript.sh</code> or alternatively <code class="inline">source myscript.sh</code>
+          </p>
+          <p>
+            The format for shell scripts is basic
+          </p>
+        </div>
+      </section>
       <section id="challenges">
         <h2>Challenges</h2>
         <div>
-          <h3>Beginner Challenges</h3>
+          <p>
+            Below are several challenges ranging in difficulty. Each challenge is somewhat open ended so you may want to
+            dive really deeply into one challenge or attempt multiple challenges.
+          </p>
           <ul>
             <li>
               <p>
-                The downloads folder is a complete mess. Help out the user YSJ by sorting out the respective files 
+                The downloads folder is a complete mess. Help out the user YSJ by sorting out the respective files
                 into appropriate locations. Make a folder in the user's Documents folder for lecture notes for each
                 module. Move any lecture notes which the ysj user has downloaded into the respective folder. Delete any
                 zip archives or installer files. Sort the remainder of the folders by file type.
@@ -288,23 +311,39 @@
             </li>
             <li>
               <p>
-                There will be four more beginner challenges here which will use basic commands to allow you to use the terminal for basic uses.
+                Somewhere in the ysj user's home directory is a file called "command-line-challenge.txt". This file
+                contains a flag (the answer for this challenge) the flag should be in the format YSJ-CS{############}.
+                <i>You will need to research the grep and find commands for this challenge</i>.
               </p>
             </li>
-          </ul>
-          <h3>Intermediate Challenges</h3>
-          <ul>
             <li>
               <p>
-                There will be a set of five advanced level challenges listed here which may include some redirection and use of a veriaty of commands
+                The file ~/Documents/ysj-chat/server.log contains a large log file... There is no need to open the file.
+                Try to use command line tools to extract as much information as possible, for instance, the first line
+                of the logfile, the last line, the number of logs. To challenge yourself further try to count the number
+                of unique users.
               </p>
             </li>
-          </ul>
-          <h3>Advanced Challenges</h3>
-          <ul>
             <li>
               <p>
-                There will be a set of five advanced level challenges listed here which may include complex redirection and shell scripting
+                Similar to beginner task one clean up the download folder... But instead, allow the user to do so
+                programmatically using a shell script. Sort the lecture notes into an appropriate folder in the
+                documents folder, sort files based on file type into subdirectories. The extent and method of this is
+                free to interpretation and it would be great to see some different implementations.
+              </p>
+            </li>
+            <li>
+              <p>
+                There is an executable: ~/AdvancedChallenge2/server create a shell script called server-manager.sh which
+                when run starts the server executable, appends both standard output and standard error into a file
+                called server.log. Additionally it should store standard error into a file called error-log.log. Any
+                error which begins with CRITICAL should also be output to the terminal's standard output. All output to
+                files and the terminal should be timestamped.
+              </p>
+            </li>
+            <li>
+              <p>
+                third challenge
               </p>
             </li>
           </ul>
