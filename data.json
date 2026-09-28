@@ -12,9 +12,13 @@
                     "links": []
                 },
                 {
-                    "title": "Week 1 - Python Programming Challenges",
-                    "description": [],
-                    "links": []
+                    "title": "Week 1 - Programming Challenges",
+                    "description": [
+                        "A set of programming challenges that can be completed in any language, but for beginners we recommend python."
+                    ],
+                    "links": [
+                        "http://ysjcompsoc.co.uk/weeks/2026101/"
+                    ]
                 },
                 {
                     "title": "Week 2 - Command Line Challenge",
