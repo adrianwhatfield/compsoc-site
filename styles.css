@@ -32,7 +32,7 @@ header {
     background-color: #181318;
 }
 
-.header-section > a > img {
+.header-section>a>img {
     max-height: 60px;
 }
 
@@ -40,7 +40,7 @@ h1 {
     font-size: 30px;
 }
 
-nav > p {
+nav>p {
     font-size: 20px;
 }
 
@@ -48,7 +48,7 @@ nav > p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:0.5em;
+    gap: 0.5em;
 }
 
 main {
@@ -56,11 +56,17 @@ main {
 }
 
 @media (max-width: 800px) {
-    main {padding: 0 5%; font-size: 20px;}
-    h1 > a {visibility: hidden;}
+    main {
+        padding: 0 5%;
+        font-size: 20px;
+    }
+
+    h1>a {
+        visibility: hidden;
+    }
 }
 
-#years > ul > li {
+#years>ul>li {
     cursor: pointer;
 }
 
@@ -69,6 +75,19 @@ main {
     transition-duration: 0.3ms;
 }
 
-#years li:hover{
+#years li:hover {
     text-decoration: underline;
+}
+
+a {
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1>a:hover {
+    text-decoration: none;
 }
