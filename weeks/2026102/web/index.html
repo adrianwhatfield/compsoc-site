@@ -33,17 +33,29 @@
       <section id="environment-setup">
         <h2>Setting up the environment</h2>
         <div>
-          <p>To provide an environment for this exercise we have used docker. Using this image to create a docker
-            container
-            will allow you to use an environment setup to be used for the exercises below. To copy our environment
-            follow
-            the
-            steps listed below.</p>
+          <p>
+            To provide an environment for this exercise we have used docker. Using this image to create a docker
+            container will allow you to use an environment setup to be used for the exercises below. To copy our
+            environment follow the steps listed below.
+          </p>
           <ol>
-            <li>Setup docker</li>
-            <li>Download the image</li>
-            <li>Run the image</li>
-            <li>Start an interactive shell</li>
+            <li>
+              <h3>Setup docker</h3>
+              <p>
+                If you are using apporto then docker is already installed. In which case you may skip this step.
+                Likewise, run the command <code class="inline">docker -v</code> if this outputs the current version of
+                docker than you may also skip this step. If docker is not installed then use your package manager to
+                install docker or on windows use <a href="www.docker.com/products/docker-desktop/">docker for
+                  desktop.</a> or although the better method of using docker on windows is using wsl2 however this takes
+                a fair bit more setup if you have never used wsl before. Worth doing though.
+              </p>
+            </li>
+            <li>
+              <h3>Build the image</h3>
+              <p>
+                To get the image files 
+              </p>
+            </li>
           </ol>
         </div>
       </section>
@@ -318,6 +330,11 @@
             </li>
             <li>
               <p>
+                The script: ~/check-server-setup.sh is not able to successfully perform all the checks.
+              </p>
+            </li>
+            <li>
+              <p>
                 The file ~/Documents/ysj-chat/server.log contains a large log file... There is no need to open the file.
                 Try to use command line tools to extract as much information as possible, for instance, the first line
                 of the logfile, the last line, the number of logs. To challenge yourself further try to count the number
@@ -326,7 +343,7 @@
             </li>
             <li>
               <p>
-                Similar to beginner task one clean up the download folder... But instead, allow the user to do so
+                Similar to first task task one clean up the download folder... But instead, allow the user to do so
                 programmatically using a shell script. Sort the lecture notes into an appropriate folder in the
                 documents folder, sort files based on file type into subdirectories. The extent and method of this is
                 free to interpretation and it would be great to see some different implementations.
@@ -339,11 +356,6 @@
                 called server.log. Additionally it should store standard error into a file called error-log.log. Any
                 error which begins with CRITICAL should also be output to the terminal's standard output. All output to
                 files and the terminal should be timestamped.
-              </p>
-            </li>
-            <li>
-              <p>
-                third challenge
               </p>
             </li>
           </ul>

@@ -1,0 +1,8 @@
+CMP1001 — Lecture 01
+Introduction to Programming
+
+Topics:
+- What a program is
+- Source code and interpreters
+- Variables and basic data types
+- Running a Python program from the terminal
