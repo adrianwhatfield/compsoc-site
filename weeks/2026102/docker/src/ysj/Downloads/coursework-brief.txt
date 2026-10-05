@@ -1,0 +1,1 @@
+Coursework brief: build a small command-line utility and document how to run it.

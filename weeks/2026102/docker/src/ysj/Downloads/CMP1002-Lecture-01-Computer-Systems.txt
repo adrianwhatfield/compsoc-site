@@ -1,0 +1,8 @@
+CMP1002 — Lecture 01
+Computer Systems
+
+Topics:
+- processes
+- memory
+- filesystems
+- users and permissions
