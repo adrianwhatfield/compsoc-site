@@ -1,0 +1,8 @@
+CMP1003 — Lecture 02
+Protocols
+
+Topics:
+- TCP and UDP
+- DNS
+- HTTP
+- simple request/response protocols

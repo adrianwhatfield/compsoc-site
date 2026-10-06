@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+echo "This is a mock installer used by the YSJ command-line challenge."
+echo "Nothing has been installed."
