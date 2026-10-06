@@ -8,8 +8,9 @@ RUN apt-get install -y \
 
 RUN useradd ysj -d /home/ysj -m -p compsoc -U
 
-COPY src/ysj/.bashrc /home/ysj/.bashrc
-COPY src/ysj/example-directory /home/ysj/example-directory
+COPY src/ysj/ /home/ysj/
 
 RUN chown -R ysj:ysj /home/ysj
+
+RUN chmod 700 /home/ysj/start-server.sh
 
