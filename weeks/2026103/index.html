@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Society</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="icon" type="image/x-icon" href="https://ysjcompsoc.co.uk/logo.png">
+</head>
+<body>
+    <header>
+        <div class="header-section">
+            <a href="https://ysjcompsoc.co.uk/"><img alt="Logo that says Computer Science Society" src="https://ysjcompsoc.co.uk/logo.png" /></a>
+            
+            <h1><a href="https://ysjcompsoc.co.uk/index.html">Computer Science Society</a></h1>
+        </div>
+        
+        <nav>
+            <p><a href="https://ysjcompsoc.co.uk/years.html">Sessions</a></p>
+        </nav>
+    </header>
+
+    <main style="text-align: left;">
+        <h2>Git Workshop and Challenge</h2>
+
+        <h3>What is git?</h3>
+        <p>Git is an open source version control system used to develop software in large groups. It allows you to track changes in the files and see who made the change. Version control is also useful for solo projects as it allows you to revert changes or track changes you have made to files.</p>
+
+        <h3>Setting Up git</h3>
+        <p><a href="https://docs.github.com/en/get-started/git-basics/set-up-git">GitHub's instructions</a></p>
+
+        <h3>How GitHub is Used</h3>
+        <p>Github is a platform on which you can host your git repos publicly or privatley. This allows you to easily use them across multiple users or devices. Github is free of charge for most projects. </p>
+
+        <h3>Creating a Git Project</h3>
+        <p>To create a git project locally, go into your project directory and type <code>git init</code> and it will create all the necessary files. To create a project on GitHub, press the add button in the top right and it'll show you a dialogue for creating a project.</p>
+
+        <h3>Cloning a Repository</h3>
+        <p>To work on a project on GitHub locally you must clone it with the command <code>git clone git@github.com:USERNAME/PROJECT-NAME.git</code> and if you have permission to it will copy the files.</p>
+
+        <h3>Adding Files to Staged and Committing</h3>
+        <p>Staged files are those that will be included in the next commit, to add them type <code>git add FILE_NAME</code> or <code>git add .</code> to quickly add all changes. To commit these changes, type in <code>git commit -m "COMMIT MESSAGE"</code> and those changed file will be in the history and associated with that message. The purpose of the message is so that other developers know what has changed. <code>git status</code> can be used to give you an overview of which files have been changed and/or staged.</p>
+
+        <h3>Log and Diff</h3>
+        <p>The log command <code>git log</code> shows committed changed in the repository. The diff command <code>git diff</code> shows the difference between different stages of the repository, for example you can compare two commits, or compare your local repository to the local.</p>
+
+        <h3>Branches and Merging</h3>
+        <p>A branch is a version of the repository that needs to be edited separately to the main branch, this is usefull when more than one developer is working on a project as it allows them to make changes without effecting the other. A common usage is for bug fixes or new features. The main branch continues on unchanged by the developer, safe from any breaking changes. When the changes are finalised they can be merged into a different branch, typically the main, but it could also be merged into a branch for testing. The command <code>git checkout -b BRANCH_NAME</code> is shorthand for <code>git branch BRANCH_NAME</code> (to create the branch) and <code>git checkout  BRANCH_NAME</code> (to switch to it). </p>
+        <p>To merge a branch, switch to the branch that is going to receive the merge, then use the command <code>git merge BRANCH_TO_BE_MERGED</code> then git will attempt to merge it. There could be a merge conflict which means that both branches have changed the same thing and git doesn't know which version is the correct version. Merge conflicts can be resolved in git in the terminal or on the site the remote repository is hosted on. </p>
+
+        <h3>Working with HEAD</h3>
+        <p>HEAD refers to the latest commit in the current branch. For example, if you wanted to go to a previous commit that was five above the latest you can type <code>git checkout HEAD~5</code>.</p>
+
+        <h3>Revert and Reset</h3>
+        <p>Revert and reset are two very similar commands, but revert keeps the commit history and reset doesn't. They are both used to undo commits.</p>
+
+        <h3>Pulling and Pushing From Remote</h3>
+        <p>Pulling is a combination of fetch and merge, so downloading data and merging it into the working directory. To edit the remote repository locally it must be pulled from the site it is on. This must be done so that you are always editing the latest version of the repository to prevent merge conflicts, but working on a separate branch is ideal in a large project. You can pull using <code>git pull</code>.</p>
+        <p>A remote repository is when it is hosted on the internet and you can push your committed changes to it. You must have permission to push to it, either because you were added as a collaborator or because you own it. If you would like to commit to a repository that someone else owns, you can fork it and make a pull request that the owner will review and choose to include in the repository or not. Use <code>git push origin BRANCH_NAME</code>.</p>
+
+        <h3>The Challenge</h3>
+        <p>This is a small challenge to get familliar with commit git commands. There are two branches in this repo <code>main</code> and <code>new_feature</code>, the goal is to merge <code>new_feature</code> into the <code>main</code> branch. However, there is a bug in the main branch that needs to be fixed.</p>
+        <p><a href="https://github.com/adrianwhatfield/git-challenge-ysj-compsoc/tree/main">Link to Challenge</a></p>
+
+        <h3>Resources</h3>
+        <ol class="resources">
+            <li><a href="https://learngitbranching.js.org/">Learn Git Branching</a></li>
+            <li><a href="https://git-scm.com/docs/gittutorial">Git Tutorial</a></li>
+            <li><a href="https://www.w3schools.com/git/">W3Schools Git Guide</a></li>
+        </ol>
+    </main>
+</body>
+</html>

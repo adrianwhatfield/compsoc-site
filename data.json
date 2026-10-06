@@ -28,6 +28,16 @@
                     "links": [
                         "http://ysjcompsoc.co.uk/weeks/2026102/web/index.html"
                     ]
+                },
+                {
+                    "title": "Week 3 - Git Workshop and Challenge",
+                    "description": [
+                        "A git workshop covering adding, committing, looking at commits, branches, and merging as well as working with remote repositories. The challenge takes you through a directory with issues."
+                    ],
+                    "links": [
+                        "http://ysjcompsoc.co.uk/weeks/2026102/web/index.html",
+                        "https://github.com/adrianwhatfield/git-challenge-ysj-compsoc"
+                    ]
                 }
             ],
             "semesterTwo": []

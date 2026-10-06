@@ -82,6 +82,13 @@ main {
 a {
     transition-duration: 0.3s;
     cursor: pointer;
+    color: #dbb4e8;
+}
+
+header a {
+    transition-duration: 0.3s;
+    cursor: pointer;
+    color: #FFFFFF;
 }
 
 a:hover {
@@ -90,4 +97,19 @@ a:hover {
 
 h1>a:hover {
     text-decoration: none;
+}
+
+.resources > li {
+    list-style-type: disc;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #2a242a;
+  color: #f1c6ff;
+  border: 1px solid #413841;
+  border-radius: 0.3em;
+  padding: 0.1em 0.2em;
+  margin: 0.1em;
+  font-size: 0.8em;
 }
