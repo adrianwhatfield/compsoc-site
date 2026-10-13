@@ -32,11 +32,11 @@
         <h3>How GitHub is Used</h3>
         <p>Github is a platform on which you can host your git repos publicly or privatley. This allows you to easily use them across multiple users or devices. Github is free of charge for most projects. </p>
 
-        <h3>Creating a Git Project</h3>
-        <p>To create a git project locally, go into your project directory and type <code>git init</code> and it will create all the necessary files. To create a project on GitHub, press the add button in the top right and it'll show you a dialogue for creating a project.</p>
+        <h3>Creating a Git Repository</h3>
+        <p>To create a git repo locally, go into your repo directory and type <code>git init</code> and it will create all the necessary files. To create a repo on GitHub, press the add button in the top right and it'll show you a dialogue for creating a repo</p>
 
         <h3>Cloning a Repository</h3>
-        <p>To work on a project on GitHub locally you must clone it with the command <code>git clone git@github.com:USERNAME/PROJECT-NAME.git</code> and if you have permission to it will copy the files.</p>
+        <p>To work on a repo on GitHub locally you must clone it with the command <code>git clone git@github.com:USERNAME/REPO-NAME.git</code> and if you have permission to it will copy the files, if using SSH.</p>
 
         <h3>Adding Files to Staged and Committing</h3>
         <p>Staged files are those that will be included in the next commit, to add them type <code>git add FILE_NAME</code> or <code>git add .</code> to quickly add all changes. To commit these changes, type in <code>git commit -m "COMMIT MESSAGE"</code> and those changed file will be in the history and associated with that message. The purpose of the message is so that other developers know what has changed. <code>git status</code> can be used to give you an overview of which files have been changed and/or staged.</p>
@@ -45,7 +45,7 @@
         <p>The log command <code>git log</code> shows committed changed in the repository. The diff command <code>git diff</code> shows the difference between different stages of the repository, for example you can compare two commits, or compare your local repository to the local.</p>
 
         <h3>Branches and Merging</h3>
-        <p>A branch is a version of the repository that needs to be edited separately to the main branch, this is usefull when more than one developer is working on a project as it allows them to make changes without effecting the other. A common usage is for bug fixes or new features. The main branch continues on unchanged by the developer, safe from any breaking changes. When the changes are finalised they can be merged into a different branch, typically the main, but it could also be merged into a branch for testing. The command <code>git checkout -b BRANCH_NAME</code> is shorthand for <code>git branch BRANCH_NAME</code> (to create the branch) and <code>git checkout  BRANCH_NAME</code> (to switch to it). </p>
+        <p>A branch is a version of the repository that needs to be edited separately to the main branch, this is usefull when more than one developer is working on a repo as it allows them to make changes without effecting the other. A common usage is for bug fixes or new features. The main branch continues on unchanged by the developer, safe from any breaking changes. When the changes are finalised they can be merged into a different branch, typically the main, but it could also be merged into a branch for testing. The command <code>git checkout -b BRANCH_NAME</code> is shorthand for <code>git branch BRANCH_NAME</code> (to create the branch) and <code>git checkout  BRANCH_NAME</code> (to switch to it). </p>
         <p>To merge a branch, switch to the branch that is going to receive the merge, then use the command <code>git merge BRANCH_TO_BE_MERGED</code> then git will attempt to merge it. There could be a merge conflict which means that both branches have changed the same thing and git doesn't know which version is the correct version. Merge conflicts can be resolved in git in the terminal or on the site the remote repository is hosted on. </p>
 
         <h3>Working with HEAD</h3>
