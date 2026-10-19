@@ -38,6 +38,21 @@
                         "http://ysjcompsoc.co.uk/weeks/2026103/",
                         "https://github.com/adrianwhatfield/git-challenge-ysj-compsoc"
                     ]
+                },
+                {
+                    "title": "Week 4 - Bad Website UI Challenge",
+                    "description": [],
+                    "links": []
+                },
+                {
+                    "title": "Week 5 - SQL Workshop and Challenge",
+                    "description": [
+                        "An SQL workshop showing you how to create and change databases and how to make queries. The challenge has a database and a series of questions to figure out the answers to with SQL queries."
+                    ],
+                    "links": [
+                        "https://ysjcompsoc.co.uk/weeks/2026105/",
+                        "https://https://github.com/adrianwhatfield/compsoc-S1W05-SQL"
+                    ]
                 }
             ],
             "semesterTwo": []

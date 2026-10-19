@@ -21,6 +21,7 @@ function generateYearLinks(data) {
         let thisYear = data.years[i];
 
         const li = document.createElement("li");
+        li.style.listStyle = "none";
 
         const a = document.createElement("a");
         a.innerHTML = thisYear.year;
@@ -63,6 +64,7 @@ function generateYears(data) {
 function generateSessions(data, element) {
     for (let i = 0; i < data.length; i++) {
         const li = document.createElement("li");
+        li.style.listStyle = "none";
         li.innerHTML = data[i].title;
         const id = Math.floor(Math.random() * 1000)
         li.setAttribute("id", id);
@@ -107,6 +109,11 @@ function toggleVisability(data) {
         }
     }
     
+}
+
+function showNav() {
+    let nav = document.getElementById("burger");
+    nav.classList.toggle("show");
 }
 
 loadJSON();
