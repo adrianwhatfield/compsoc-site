@@ -90,7 +90,7 @@ h1 {
 }
 
 main {
-    padding: 0 30%;
+    padding: 0 20%;
     flex-grow: 1;
 }
 
@@ -167,15 +167,16 @@ h1>a:hover {
     text-decoration: none;
 }
 
-code {
+code, .code_block {
   font-family: "Courier New", Courier, monospace;
-  background-color: #2a242a;
-  color: #f1c6ff;
-  border: 1px solid #413841;
-  border-radius: 0.3em;
+  background-color: white;
+  color: var(--text-alt);
+  border: 1px solid var(--bg-alt);
+  border-radius: 0.1em;
   padding: 0.1em 0.2em;
   margin: 0.1em;
   font-size: 0.8em;
+  width: fit-content;
 }
 
 footer {

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Society</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="https://ysjcompsoc.co.uk/logo.png">
+</head>
+<body>
+    <header>
+        <div class="header-section">
+            <a href="/index.html"><img alt="Logo that says Computer Science Society" src="https://ysjcompsoc.co.uk/logo.png" /></a>
+            
+            <h1><a href="/index.html">Computer Science Society</a></h1>
+        </div>
+        
+        <nav class="nav" id="nav">
+            <a class="link" href="/about.html">About</a>
+            <a class="link" href="/years.html">Sessions</a>
+            <a class="link" href="/contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onClick="showNav()"><img src="/Hamburger_icon.svg" alt=""></a>
+        </nav>
+
+        
+    </header>
+
+    <nav id="burger" class="burger">
+        <a href="/about.html">About</a>
+        <a href="/years.html">Sessions</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+
+    <main style="text-align: left;">
+        <h2>SQL Workshop</h2>
+
+        <h3>What is SQL?</h3>
+        <p>SQL (structured query language) is a language for accessing and manipulating databases, which are similar to spreadsheets in structure. It comes it several dialects, that are slightly different but largely follow the same standard. The structure of a query is <code>SELECT * FROM staff;</code> which would select all the columns in the staff table.</p>
+
+        <h3>Creating a Database</h3>
+        <p>To create a database use <code>CREATE DATABASE db_name;</code> and in different dialects you can see a list of databases, for MySQL it is <code>SHOW DATABASES;</code>.</p>
+
+        <h3>Creating a Table</h3>
+        <p>Tables live inside of databases and are about one thing, like customers or products. They have a series of columns, which can be of different datatypes.</p>
+
+        <div class="code_block">
+            <p>CREATE TABLE customer (</p>
+            <p>&emsp; customer_id int PRIMARY KEY,</p>
+            <p>&emsp; surname varchar(255) NOT NULL,</p>
+            <p>&emsp; first_name varchar(255),</p>
+            <p>&emsp; email varchar(255),</p>
+            <p>&emsp; age int</p>
+            <p>);</p>
+        </div>
+
+        <p>This table can now be searched through by the database management system (DBMS), added to, or manipulated.</p>
+
+        <p>Keys are identifier for columns, a PRIMARY key means that it is a value unique to that row and can't show up again. A FOREIGN KEY is another table's PRIMARY KEY and is used in conjunction with JOINs. For example, a customer order's table might also include the customer ID, so you can work out who made what order.</p>
+
+        <h3>Inserting Data</h3>
+        <p>Inserting data into a table means adding data to the end, if you have a primary key, it will be generated as the next free number. To insert data, use the queries below.</p>
+
+        <div class="code_block">
+            <p>INSERT INTO table_name (column1, column2, column3, ...)</p>
+            <p>VALUES (value1, value2, value3, ...);</p>
+        </div>
+
+        <div class="code_block">
+            <p>INSERT INTO table_name</p>
+            <p>VALUES (value1, value2, value3, ...);</p>
+        </div>
+
+        <p>The first syntax is for only adding a row with certain columns filled in (if a user doesn't enter a name, for example) and the second syntax is for adding a row where all of the data for the columns are known.</p>
+
+        <h3>SELECT Keyword</h3>
+        <p>The <code>SELECT</code> keyword is used for finding data within one or more tables. The syntax is <code>SELECT column1, column2, ... FROM table_name;</code> which will select every row's columns that are named.</p>
+
+        <div class="code_block">
+            <p>SELECT first_name, last_name</p>
+            <p>FROM customers;</p>
+        </div>
+
+        <p>The query above will select every customer's first and last names in the table, if one of the values is null it will say something like NULL, NaN, or be blank.</p>
+
+        <h3>WHERE Keyword and Operators</h3>
+        <p>The <code>WHERE</code> keyword is how you add specificity to your query. Operators can be used in combination with it, they are: &#61;, &#62;, &#60;, &#60;&#62; (not equal), BETWEEN, LIKE, and IN.</p>
+
+        <div class="code_block">
+            <p>SELECT first_name, age</p>
+            <p>FROM customers</p>
+            <p>WHERE age &#62;&#61; 18</p>
+            <p>AND first_name LIKE 'J%';</p>
+        </div>
+
+        <p>The query above would select all the customers who are more than or equal to 18 years old and first name begins with 'J'. You can include more than this amount of conditions, but each one after the first must start with AND.</p>
+
+        <h3>Deleting and Change Data</h3>
+        <p>To delete or change data from a table and if you don't want to alter every row in a table, you need to include a <code>WHERE</code> keyword. The syntax for deletion is <code>DELETE FROM table_name WHERE condition;</code>. For updating/changing data it is:</p>
+
+        <div class="code_block">
+            <p>UPDATE table_name</p>
+            <p>SET column1 = value1, column2 = value2, ...</p>
+            <p>WHERE condition;</p>
+        </div>
+
+        <h3>Aggregate Functions</h3>
+        <p>Aggregate functions apply a calculation to a column or section of a columns and return the value. There are five of them: MIN, MAX, COUNT, SUM, and AVG. In order to use them, they are usually combined with an GROUP BY clause so the results, so they are split into categories.</p>
+
+        <div class="code_block">
+            <p>SELECT department_name, AVG(salary)</p>
+            <p>FROM staff</p>
+            <p>GROUP BY department_name;</p>
+        </div>
+        <p>This would show the average salary per department.</p>
+
+        <div class="code_block">
+            <p>SELECT gender, MAX(age)</p>
+            <p>FROM customer</p>
+            <p>GROUP BY gender;</p>
+        </div>
+        <p>This would show the maximum age for different genders of the customers.</p>
+
+        <div class="code_block">
+            <p>SELECT author, COUNT(title)</p>
+            <p>FROM articles</p>
+            <p>GROUP BY author;</p>
+        </div>
+        <p>This would show the number of articles in the table by each author.</p>
+
+        <h3>JOINs</h3>
+        <p>JOINs can combine multiple tables into one query for the use of data analysis. To join two tables, they need to have a column in common (typically an ID), this is a FOREIGN KEY.</p>
+
+        <div class="code_block">
+            <p>SELECT c.last_name, o.product_name</p>
+            <p>FROM customers c</p>
+            <p>JOIN orders o ON c.customer_id = o.customer_id;</p>
+        </div>
+        <p>The above query would show all the customer's surnames and the product they bought's name. When joining, use ON to show what the two tables have in common. To join more tables, just add another line, you can chain JOINs. IF the orders table included a staff ID, you could join to the staff table and get their data too.</p>
+
+        <h2>The Challenge</h2>
+        <p><a href="https://https://github.com/adrianwhatfield/compsoc-S1W05-SQL">The challenge</a> has several tables and questions to answer about the data, one SQL query can be used to answer each one, but not everything required has been mentioned here.</p>
+
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="https://www.w3schools.com/sql/default.asp">W3Schools SQL Tutorial</a></li>
+            <li><a href="https://sqlbolt.com/lesson/introduction">SQLBolt</a></li>
+        </ul>
+    </main>
+
+    <footer>
+        <p><a href="https://github.com/adrianwhatfield/compsoc-site">Source Code</a></p>
+        <ol class="blank">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/years.html">Sessions</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ol>
+    </footer>
+</body>
+</html>
